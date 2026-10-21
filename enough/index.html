@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Wealth Beyond Enough</title>
+<meta name="description" content="A small book about money, ego, relationships, creation, and the meaning of a life well lived. By Dharmendra Satapathy. Read it online or download the PDF.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nlehni.com/enough/">
+<meta property="og:title" content="The Wealth Beyond Enough">
+<meta property="og:description" content="A small book about money, ego, relationships, creation, and the meaning of a life well lived. By Dharmendra Satapathy.">
+<meta property="og:image" content="https://nlehni.com/enough./share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+/* The Wealth Beyond Enough as a book on a navy desk: one quiet bar above, one below.  */
+:root{
+  --desk:#10161F; --desk-2:#1F2D42; --ink:#F3EFE6; --muted:#A6AEBD;
+  --line:rgba(243,239,230,.18); --red:#C9A86A;
+  --display:'Fraunces',Georgia,serif;
+  --body:'DM Sans',system-ui,Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk) 70%);background-color:var(--desk);color:var(--ink);font-family:var(--body);overflow:hidden}
+.app{height:100%;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.topbar{padding:12px 16px 0}
+.topbar-in{display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:baseline;gap:10px;min-width:0;margin-right:auto}
+.brand b{font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:0;white-space:nowrap}
+.brand b i{font-style:normal;color:var(--red)}
+.brand span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.join{font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#10161F;background:var(--red);padding:8px 14px;text-decoration:none;white-space:nowrap}
+.join:hover{filter:brightness(1.1)}
+.shelf{font-family:var(--body);font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap;margin-right:10px}
+.shelf:hover{color:var(--ink)}
+.stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:14px 16px;position:relative}
+#holder{margin:0 auto;max-width:100%}
+#book{width:100%}
+.pg{background:#fff;overflow:hidden}
+.pg img{width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none;max-width:none}
+.pg a.hot{position:absolute;display:block;z-index:2}
+.side{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:64px;border:0;background:rgba(255,255,255,.06);color:var(--ink);font-size:26px;cursor:pointer;z-index:5}
+.side:hover{background:rgba(255,255,255,.14)}
+.side.l{left:8px}.side.r{right:8px}
+.side:disabled{opacity:.25;cursor:default}
+.bar{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 16px calc(12px + env(safe-area-inset-bottom,0px));flex-wrap:wrap}
+.bar button,.bar a{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink);background:transparent;border:1px solid var(--line);padding:8px 12px;cursor:pointer;min-height:36px;text-decoration:none;display:inline-flex;align-items:center}
+.bar button:hover,.bar a:hover{border-color:var(--ink)}
+.bar button:disabled{opacity:.35;cursor:default}
+.bar :focus-visible,.side:focus-visible,.join:focus-visible,.thumbs button:focus-visible,.pg a.hot:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.count{font-variant-numeric:tabular-nums;font-size:13px;font-weight:600;min-width:84px;text-align:center;color:var(--muted)}
+.count b{color:var(--ink)}
+.thumbs{display:flex;gap:10px;justify-content:center;padding:4px 16px 10px;overflow-x:auto}
+.thumbs[hidden]{display:none}
+.thumbs button{border:2px solid transparent;padding:0;background:none;cursor:pointer;flex:0 0 auto;color:var(--muted)}
+.thumbs img{width:54px;height:76px;object-fit:cover;display:block}
+.thumbs button.on{border-color:var(--red)}
+.thumbs span{display:block;font-size:10px;text-align:center;margin-top:3px;font-variant-numeric:tabular-nums}
+.hint{position:absolute;bottom:2px;left:0;right:0;margin:0;text-align:center;font-size:11px;color:var(--muted);pointer-events:none;transition:opacity .6s}
+[hidden]{display:none!important}
+.brand b{overflow:hidden;text-overflow:ellipsis}
+@media (max-width:640px){.brand span{display:none}.brand b{font-size:16px}.join{font-size:12px;padding:8px 10px}.side{display:none}.bar button,.bar a{padding:8px 10px}}
+@media (prefers-reduced-motion:reduce){.hint{transition:none}}
+#zoom{position:fixed;inset:0;z-index:50;background:#080d20;display:flex;flex-direction:column}
+#zoom[hidden]{display:none}
+#zoom .zbar{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;border-bottom:1px solid var(--line)}
+#zoom .zbar button{font-family:var(--body);font-size:14px;font-weight:600;color:var(--ink);background:transparent;border:1px solid var(--line);padding:8px 13px;min-height:38px;cursor:pointer}
+#zoom .zbar button:hover{border-color:var(--ink)}
+#zoom .zbar button:disabled{opacity:.35;cursor:default}
+#zoom .zbar :focus-visible{outline:2px solid var(--red);outline-offset:2px}
+#zoom .zlab{font-variant-numeric:tabular-nums;font-size:13px;font-weight:600;color:var(--muted);min-width:110px;text-align:center}
+#zoom .zst{flex:1;min-height:0;overflow:auto;cursor:grab;-webkit-overflow-scrolling:touch}
+#zoom .zst.drag{cursor:grabbing}
+#zoom .zst img{display:block;margin:16px auto 40px;max-width:none;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.5);user-select:none;-webkit-user-drag:none}
+.pg img{cursor:zoom-in}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar"><div class="topbar-in">
+    <div class="brand"><b>The Wealth Beyond <i>Enough</i></b><span>Dharmendra Satapathy · 24 pages</span></div>
+    <a class="shelf" href="../">All books</a>
+    <a class="join" href="./the-wealth-beyond-enough.pdf" download="The-Wealth-Beyond-Enough.pdf">Download PDF</a>
+  </div></header>
+  <main class="stage" id="stage">
+    <button class="side l" id="prevSide" type="button" aria-label="Previous page">‹</button>
+    <div id="holder"><div id="book" aria-label="The Wealth Beyond Enough, page-turning view">
+      <div class="pg" data-density="hard"><img src="./p1.jpg" alt="Cover: The Wealth Beyond Enough, a small book by Dharmendra Satapathy. Two chairs facing a sunset over a city."></div>
+      <div class="pg"><img src="./p2.jpg" alt="Dedication: For my team."></div>
+      <div class="pg"><img src="./p3.jpg" alt="Contents: Prologue, five chapters, Epilogue and the Five Lessons."></div>
+      <div class="pg"><img src="./p4.jpg" alt="Prologue: The Question Beyond Money. What happens when money stops making us meaningfully richer?"></div>
+      <div class="pg"><img src="./p5.jpg" alt="Chapter One: The Boss Who Was Ten Times Richer. Two people across a boardroom table, one clearly senior."></div>
+      <div class="pg"><img src="./p6.jpg" alt="Chapter One, continued: fifteen lakh against three crore, and life not finished with its calculations."></div>
+      <div class="pg"><img src="./p7.jpg" alt="Chapter One, continued: Ten Years Later. Unequal wealth, a surprisingly similar need to obey money."></div>
+      <div class="pg"><img src="./p8.jpg" alt="Chapter One, continued: The Question. Who was richer? The first great lesson."></div>
+      <div class="pg"><img src="./p9.jpg" alt="Chapter Two: The Pyramid That Disappeared. An organisation chart of empty frames on a wall."></div>
+      <div class="pg"><img src="./p10.jpg" alt="Chapter Two, continued: the boss who chose superiority, and the pyramid that stopped existing."></div>
+      <div class="pg"><img src="./p11.jpg" alt="Chapter Two, continued: The Invisible Loss, and what ego prevents from being born."></div>
+      <div class="pg"><img src="./p12.jpg" alt="Chapter Three: The Day Fifty Crore Became Five Crore. A walker on a mountain path reaching the plateau."></div>
+      <div class="pg"><img src="./p13.jpg" alt="Chapter Three, continued: the curve flattens past enough."></div>
+      <div class="pg"><img src="./p14.jpg" alt="Chapter Three, continued: free at forty, dependent until seventy, and the game of creation."></div>
+      <div class="pg"><img src="./p15.jpg" alt="Chapter Four: Two Men and a Thousand-Crore Dream. A small team around a laptop in a modest office."></div>
+      <div class="pg"><img src="./p16.jpg" alt="Chapter Four, continued: capital placed, and an institution built over twenty years."></div>
+      <div class="pg"><img src="./p17.jpg" alt="Chapter Four, continued: Who Is Richer? Owned against created."></div>
+      <div class="pg"><img src="./p18.jpg" alt="Chapter Five: The Wealth That Never Appeared on the Balance Sheet. An older man on a bench at sunset."></div>
+      <div class="pg"><img src="./p19.jpg" alt="Chapter Five, continued: twenty-five years on, the network of people he helped become."></div>
+      <div class="pg"><img src="./p20.jpg" alt="Chapter Five, continued: The Final Irony, and the greatest cost of ego."></div>
+      <div class="pg"><img src="./p21.jpg" alt="Chapter Five, continued: what a good leader does early. Titles are temporary; human dignity is not."></div>
+      <div class="pg"><img src="./p22.jpg" alt="Epilogue: When Enough Is Only the Beginning. Money can make you independent, people richer, purpose meaningful."></div>
+      <div class="pg"><img src="./p23.jpg" alt="Afterword: The Five Lessons, one line from each chapter."></div>
+      <div class="pg" data-density="hard"><img src="./p24.jpg" alt="Back cover: The Wealth Beyond Enough, by Dharmendra Satapathy."></div>
+    </div></div>
+    <button class="side r" id="nextSide" type="button" aria-label="Next page">›</button>
+    <p class="hint" id="hint">Drag a corner, swipe, or use the arrow keys to turn pages</p>
+  </main>
+  <nav class="thumbs" id="thumbs" hidden aria-label="Pages"></nav>
+  <footer class="bar">
+    <button type="button" id="first" aria-label="First page">⏮</button>
+    <button type="button" id="prev">‹ Prev</button>
+    <span class="count" id="count" aria-live="polite"><b>1</b> / 24</span>
+    <button type="button" id="next">Next ›</button>
+    <button type="button" id="pagesBtn" aria-expanded="false">Pages</button>
+    <button type="button" id="zoomBtn" title="Read one page large (or double-click a page)">Zoom</button>
+    <button type="button" id="fs">Full screen</button>
+    <button type="button" id="copy" aria-live="polite">Copy link</button>
+    <a href="./the-wealth-beyond-enough.pdf" download="The-Wealth-Beyond-Enough.pdf">Download PDF</a>
+  </footer>
+</div>
+
+<script src="../assets/page-flip-2.0.7.js"></script>
+<script>
+(function(){
+  var N = 24, W = 1243, H = 1761, cur = 0, flip = null, flat = false;
+  var $ = function(id){ return document.getElementById(id); };
+  var book = $('book'), stage = $('stage'), holder = $('holder');
+  var pages = [].slice.call(book.querySelectorAll('.pg'));
+  var SRC = pages.map(function(p){ return p.querySelector('img').src; });
+  var landscape = function(){ return flip && flip.getOrientation() === 'landscape'; };
+
+  for (var i = 0; i < N; i++) (function(i){
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to page ' + (i + 1));
+    b.innerHTML = '<img src="./t' + (i + 1) + '.jpg" alt=""><span>' + (i + 1) + '</span>';
+    b.addEventListener('click', function(){ go(i); });
+    $('thumbs').appendChild(b);
+  })(i);
+
+  function label(i){
+    if (!landscape() || i === 0 || i === N - 1) return '<b>' + (i + 1) + '</b> / ' + N;
+    var a = i % 2 ? i : i - 1; return '<b>' + (a + 1) + '–' + (a + 2) + '</b> / ' + N;
+  }
+  function update(i){
+    cur = i; $('count').innerHTML = label(i);
+    $('prev').disabled = $('first').disabled = $('prevSide').disabled = i === 0;
+    $('next').disabled = $('nextSide').disabled = i >= N - 1;
+    var pair = landscape() && i > 0 && i < N - 1 ? (i % 2 ? i + 1 : i - 1) : -1;
+    [].forEach.call($('thumbs').children, function(t, k){ t.classList.toggle('on', k === i || k === pair); });
+    try { history.replaceState(null, '', '#p' + (i + 1)); } catch(e){}
+  }
+  function go(i){ if (flip) flip.flip(i); else showFlat(i); }
+  function next(){ if (flip) flip.flipNext(); else showFlat(Math.min(N - 1, cur + 1)); }
+  function prev(){ if (flip) flip.flipPrev(); else showFlat(Math.max(0, cur - 1)); }
+
+  // two pages side by side when the stage is wide enough, one otherwise
+  function fit(){
+    var sw = stage.clientWidth - 32 - (innerWidth > 640 ? 120 : 0), sh = stage.clientHeight - 28;
+    var wide = sw / sh > (W / H) * 1.35;
+    var pageH = Math.min(sh, (wide ? sw / 2 : sw) * H / W);
+    return { w: Math.floor(pageH * W / H), h: Math.floor(pageH), wide: wide };
+  }
+  function sizeBook(){ var s = fit(); holder.style.width = (s.wide ? s.w * 2 : s.w) + 'px'; }
+
+  function start(){
+    var s = fit();
+    if (!window.St || !St.PageFlip) return startFlat();
+    flip = new St.PageFlip(book, {
+      width: s.w, height: s.h, size: 'stretch',
+      minWidth: 200, maxWidth: 2000, minHeight: 280, maxHeight: 4000,
+      showCover: true, usePortrait: true, mobileScrollSupport: false,
+      maxShadowOpacity: .45, flippingTime: 750, autoSize: true
+    });
+    sizeBook();
+    flip.loadFromHTML(pages);
+    flip.on('flip', function(e){ update(e.data); });
+    flip.on('changeOrientation', function(){ update(flip.getCurrentPageIndex()); });
+    var m = /^#p(\d+)$/.exec(location.hash), at = m ? Math.min(N, Math.max(1, +m[1])) - 1 : 0;
+    if (at) flip.turnToPage(at);
+    update(at);
+  }
+  function refit(){ if (flip) { sizeBook(); try { flip.update(); } catch(e){} } else if (flat) showFlat(cur); }
+  addEventListener('resize', refit);
+
+  // plain page viewer, if the flip script cannot load
+  function startFlat(){ flat = true; showFlat(0); }
+  function showFlat(i){
+    var s = fit(); book.innerHTML = '';
+    var img = new Image(); img.src = './p' + (i + 1) + '.jpg'; img.alt = 'Page ' + (i + 1);
+    img.style.cssText = 'display:block;margin:0 auto;height:' + s.h + 'px;box-shadow:0 20px 60px rgba(0,0,0,.5)';
+    book.appendChild(img); update(i);
+  }
+
+  $('next').onclick = $('nextSide').onclick = next;
+  $('prev').onclick = $('prevSide').onclick = prev;
+  $('first').onclick = function(){ if (flip) { flip.turnToPage(0); update(0); } else showFlat(0); };
+  addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { next(); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { prev(); e.preventDefault(); }
+    else if (e.key === 'Home') go(0); else if (e.key === 'End') go(N - 1);
+  });
+  $('pagesBtn').onclick = function(){
+    var t = $('thumbs'); t.hidden = !t.hidden; this.setAttribute('aria-expanded', String(!t.hidden));
+    setTimeout(refit, 0);
+  };
+  $('fs').onclick = function(){
+    var d = document, el = d.documentElement;
+    try {
+      if (d.fullscreenElement) d.exitFullscreen();
+      else if (el.requestFullscreen) el.requestFullscreen().catch(function(){ $('fs').hidden = true; });
+      else $('fs').hidden = true;
+    } catch(e){ $('fs').hidden = true; }
+  };
+  if (!document.documentElement.requestFullscreen) $('fs').hidden = true;
+  document.addEventListener('fullscreenchange', function(){
+    $('fs').textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; setTimeout(refit, 120);
+  });
+  setTimeout(function(){ $('hint').style.opacity = 0; }, 6000);
+
+  // Copy the clean link (no page anchor), so what gets shared is always the live book
+  var LINK = 'https://nlehni.com/enough';
+  $('copy').onclick = function(){
+    var btn = this, done = function(t){ btn.textContent = t; setTimeout(function(){ btn.textContent = 'Copy link'; }, 2000); };
+    var fallback = function(){
+      var ta = document.createElement('textarea'); ta.value = LINK; ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch(e){}
+      document.body.removeChild(ta); done(ok ? 'Link copied' : LINK);
+    };
+    try { navigator.clipboard.writeText(LINK).then(function(){ done('Link copied'); }, fallback); } catch(e){ fallback(); }
+  };
+
+  // Zoom reader: one page at a time, full screen, + / − / Fit, drag or scroll to move around.
+  (function(){
+    var z = document.createElement('div'); z.id = 'zoom'; z.hidden = true;
+    z.setAttribute('role', 'dialog'); z.setAttribute('aria-label', 'Zoomed page');
+    z.innerHTML = '<div class="zbar"><button type="button" id="zprev" aria-label="Previous page">‹</button><span class="zlab" id="zlab"></span>' +
+      '<button type="button" id="znext" aria-label="Next page">›</button><button type="button" id="zout" aria-label="Zoom out">−</button>' +
+      '<button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zfit">Fit width</button><button type="button" id="zclose">Close ✕</button></div>' +
+      '<div class="zst" id="zst"><img id="zimg" alt=""></div>';
+    document.body.appendChild(z);
+    var st = $('zst'), im = $('zimg'), zi = 0, scale = 1, STEPS = [0.75, 1, 1.35, 1.75, 2.25, 3];
+    function fitW(){ return Math.min(st.clientWidth - 32, 1100); }
+    function paintZ(){
+      var w = Math.round(fitW() * scale); im.style.width = w + 'px';
+      $('zlab').textContent = 'Page ' + (zi + 1) + ' / ' + N + ' · ' + Math.round(scale * 100) + '%';
+      $('zprev').disabled = zi === 0; $('znext').disabled = zi >= N - 1;
+      $('zout').disabled = scale <= STEPS[0]; $('zin').disabled = scale >= STEPS[STEPS.length - 1];
+    }
+    function showZ(i){ zi = Math.max(0, Math.min(N - 1, i)); im.src = SRC[zi]; im.alt = pages[zi].querySelector('img').alt; st.scrollTop = 0; paintZ(); }
+    function openZ(i){ z.hidden = false; scale = 1; showZ(i); $('zclose').focus(); }
+    function closeZ(){ z.hidden = true; if (flip && zi !== cur) { try { flip.turnToPage(zi); update(zi); } catch(e){} } }
+    function zoomBy(d){
+      var k = STEPS.indexOf(scale); if (k < 0) k = 1; k = Math.max(0, Math.min(STEPS.length - 1, k + d));
+      var cx = (st.scrollLeft + st.clientWidth / 2) / (im.offsetWidth || 1), cy = (st.scrollTop + st.clientHeight / 2) / (im.offsetHeight || 1);
+      scale = STEPS[k]; paintZ();
+      st.scrollLeft = cx * im.offsetWidth - st.clientWidth / 2; st.scrollTop = cy * im.offsetHeight - st.clientHeight / 2;
+    }
+    $('zprev').onclick = function(){ showZ(zi - 1); };
+    $('znext').onclick = function(){ showZ(zi + 1); };
+    $('zin').onclick = function(){ zoomBy(1); };
+    $('zout').onclick = function(){ zoomBy(-1); };
+    $('zfit').onclick = function(){ scale = 1; paintZ(); };
+    $('zclose').onclick = closeZ;
+    $('zoomBtn').onclick = function(){ openZ(cur); };
+    book.addEventListener('dblclick', function(e){
+      var t = e.target.closest && e.target.closest('.pg'); var i = t ? pages.indexOf(t) : -1;
+      if (i < 0 && e.target.tagName === 'IMG') i = SRC.indexOf(e.target.src);
+      openZ(i >= 0 ? i : cur);
+    });
+    addEventListener('keydown', function(e){
+      if (z.hidden) return;
+      var k = e.key, used = true;
+      if (k === 'Escape') closeZ(); else if (k === 'ArrowRight' && !e.shiftKey && scale <= 1) showZ(zi + 1);
+      else if (k === 'ArrowLeft' && !e.shiftKey && scale <= 1) showZ(zi - 1);
+      else if (k === '+' || k === '=') zoomBy(1); else if (k === '-') zoomBy(-1); else used = false;
+      if (used) { e.preventDefault(); e.stopImmediatePropagation(); }
+    }, true);
+    st.addEventListener('wheel', function(e){ if (e.ctrlKey) { e.preventDefault(); zoomBy(e.deltaY < 0 ? 1 : -1); } }, { passive: false });
+    var dx = 0, dy = 0, down = false;
+    st.addEventListener('pointerdown', function(e){ if (e.pointerType !== 'mouse') return; down = true; dx = e.clientX; dy = e.clientY; st.classList.add('drag'); });
+    addEventListener('pointermove', function(e){ if (!down) return; st.scrollLeft -= e.clientX - dx; st.scrollTop -= e.clientY - dy; dx = e.clientX; dy = e.clientY; });
+    addEventListener('pointerup', function(){ down = false; st.classList.remove('drag'); });
+    addEventListener('resize', function(){ if (!z.hidden) paintZ(); });
+  })();
+
+  if (document.readyState === 'complete') start(); else addEventListener('load', start);
+})();
+</script>
+</body>
+</html>
