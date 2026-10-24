@@ -180,9 +180,9 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
     [].forEach.call($('thumbs').children, function(t, k){ t.classList.toggle('on', k === i || k === pair); });
     try { history.replaceState(null, '', '#p' + (i + 1)); } catch(e){}
   }
-  function go(i){ if (flip) flip.flip(i); else showFlat(i); }
-  function next(){ if (flip) flip.flipNext(); else showFlat(Math.min(N - 1, cur + 1)); }
-  function prev(){ if (flip) flip.flipPrev(); else showFlat(Math.max(0, cur - 1)); }
+  function go(i){ if (flip) flip.flip(i); else if (flat) showFlat(i); }
+  function next(){ if (flip) flip.flipNext(); else if (flat) showFlat(Math.min(N - 1, cur + 1)); }
+  function prev(){ if (flip) flip.flipPrev(); else if (flat) showFlat(Math.max(0, cur - 1)); }
 
   // two pages side by side when the stage is wide enough, one otherwise
   function fit(){
@@ -225,7 +225,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 
   $('next').onclick = $('nextSide').onclick = next;
   $('prev').onclick = $('prevSide').onclick = prev;
-  $('first').onclick = function(){ if (flip) { flip.turnToPage(0); update(0); } else showFlat(0); };
+  $('first').onclick = function(){ if (flip) { flip.turnToPage(0); update(0); } else if (flat) showFlat(0); };
   addEventListener('keydown', function(e){
     if (e.key === 'ArrowRight' || e.key === 'PageDown') { next(); e.preventDefault(); }
     else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { prev(); e.preventDefault(); }
@@ -315,7 +315,10 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
     addEventListener('resize', function(){ if (!z.hidden) paintZ(); });
   })();
 
-  if (document.readyState === 'complete') start(); else addEventListener('load', start);
+  // open the book at once: the pages have a fixed size, so nothing needs to wait for the pictures to download
+  start();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refit);
+  addEventListener('load', refit);
 })();
 </script>
 
