@@ -15,12 +15,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Fraunces:opsz,wght@9..144,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap">
 <style>
-/* The book lying open on a night-blue desk: one quiet bar above, one below. Single dark look, taken from the book's cover. */
+/* The book on a navy desk, in the family look of The Wealth Beyond Enough: one quiet bar above, one below. */
 :root{
-  --desk:#0F1830; --desk-2:#1B2A4D; --ink:#F3EFE6; --muted:#A6AEBD;
-  --line:rgba(243,239,230,.16); --gold:#E3B26A;
+  --desk:#10161F; --desk-2:#1F2D42; --ink:#F3EFE6; --muted:#A6AEBD;
+  --line:rgba(243,239,230,.18); --gold:#C9A86A;
   --display:'Fraunces',Georgia,'Times New Roman',serif;
   --body:'DM Sans',system-ui,'Helvetica Neue',Arial,sans-serif;
   color-scheme:dark;
@@ -33,7 +33,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 .topbar{padding-block:12px 0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .topbar-in{display:flex;align-items:center;gap:12px}
 .brand{display:flex;align-items:baseline;gap:12px;min-width:0;margin-right:auto}
-.brand b{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.005em;white-space:nowrap}
+.brand b{font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:-.005em;white-space:nowrap}
 .brand b i{font-style:normal;color:var(--gold)}
 .brand span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ladder{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
@@ -45,7 +45,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 .stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding-block:14px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));position:relative}
 #holder{margin:0 auto;max-width:100%}
 #book{width:100%}
-.pg{background:#F6F0E5;overflow:hidden}
+.pg{background:#FBF8F1;overflow:hidden}
 .pg img{width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none;max-width:none}
 .side{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:64px;border:0;background:rgba(243,238,228,.06);color:var(--ink);font-size:26px;cursor:pointer;z-index:5}
 .side:hover{background:rgba(243,238,228,.14)}
@@ -60,7 +60,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 .count b{color:var(--ink)}
 .thumbs{display:flex;gap:10px;justify-content:flex-start;padding-block:4px 10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:auto}
 .thumbs button{border:2px solid transparent;padding:0;background:none;cursor:pointer;flex:0 0 auto;color:var(--muted);font-family:var(--body)}
-.thumbs img{width:54px;height:72px;object-fit:cover;display:block}
+.thumbs img{width:54px;height:77px;object-fit:cover;display:block}
 .thumbs button.on{border-color:var(--gold)}
 .thumbs span{display:block;font-size:10px;text-align:center;margin-top:3px;font-variant-numeric:tabular-nums}
 .hint{position:absolute;bottom:2px;left:0;right:0;margin:0;text-align:center;font-size:11px;color:var(--muted);pointer-events:none;transition:opacity .6s}
@@ -68,7 +68,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 @media (max-width:640px){.brand b{white-space:normal;font-size:16px;line-height:1.15}}
 @media (max-width:360px){.brand b{font-size:14px}.tb{padding:8px 9px}}
 @media (prefers-reduced-motion:reduce){.hint{transition:none}}
-#zoom{position:fixed;inset:0;z-index:50;background:#0B1224;display:flex;flex-direction:column}
+#zoom{position:fixed;inset:0;z-index:50;background:#0C1118;display:flex;flex-direction:column}
 #zoom .zbar{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;padding-top:calc(10px + env(safe-area-inset-top,0px));padding-bottom:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:1px solid var(--line)}
 #zoom .zbar button{font-family:var(--body);font-size:14px;font-weight:700;color:var(--ink);background:transparent;border:1px solid var(--line);padding:8px 13px;min-height:38px;cursor:pointer}
 #zoom .zbar button:hover{border-color:var(--gold)}
@@ -85,7 +85,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 
 <div class="app">
   <header class="topbar"><div class="topbar-in">
-    <div class="brand"><b>Money Is Made <i>in</i> Imagination</b><span>Dharmendra Satapathy · 30 pages</span></div>
+    <div class="brand"><b>Money Is Made <i>in</i> Imagination</b><span>Dharmendra Satapathy · 46 pages</span></div>
     <span class="ladder">Imagination → Execution → Adoption → Value</span>
     <a class="tb" href="../">All books</a>
     <a class="tb pdf" href="./money-is-made-in-imagination.pdf" download="Money-Is-Made-in-Imagination.pdf">Download PDF</a>
@@ -100,7 +100,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
   <footer class="bar">
     <button type="button" id="first" aria-label="First page">⏮</button>
     <button type="button" id="prev">‹ Prev</button>
-    <span class="count" id="count" aria-live="polite"><b>1</b> / 30</span>
+    <span class="count" id="count" aria-live="polite"><b>1</b> / 46</span>
     <button type="button" id="next">Next ›</button>
     <button type="button" id="pagesBtn" aria-expanded="false">Pages</button>
     <button type="button" id="zoomBtn" title="Read one page large (or double-click a page)">Zoom</button>
@@ -113,40 +113,56 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 <script>
 (function(){
   var ALT = [
-    'Cover: a man with a backpack sits on a hilltop watching the sun rise over the mountains. Money Is Made in Imagination: how the future you envision can become the wealth you create. Dharmendra Satapathy.',
-    'A child gazes upward, smiling, holding a toy plane. Can you live ten times your life? Your life may be finite. The future you create need not be.',
-    'A traveller watches a plane take off through an airport window. Every business is born twice: first in somebody\'s imagination, then in the real world.',
-    'A glowing light bulb beside a notebook sketch of a rocket. The invisible factory of wealth: resources determine what you can do today; imagination influences what you attempt to make possible tomorrow.',
-    'Four wooden puzzle pieces: Imagination, Execution, Adoption, Value Capture. Imagination is not daydreaming: the four bridges from idea to value.',
-    'A signpost at sunset pointing two ways, Desire and Vision. Desire imagines what you can gain. Vision imagines what you can make possible.',
-    'Desire makes you profitable. Vision makes you valuable. Profit asks what the business earns; valuation asks what it may be worth as a source of future economic benefits.',
-    'Vision is an invitation. Imagination makes you see a future. Vision makes others see themselves in it.',
-    'Happiness may be hiding in usefulness. Vision can make you happy before it makes you wealthy.',
-    'Climbers help one another up a rock face. The difference between being important and being useful: dependence versus capability.',
-    'The trap of vertical relationships. A hierarchy is necessary for decision-making. A hierarchy of human worth is not.',
-    'Three colleagues of different generations talk as equals. The power of horizontal relationships: what can we make possible together?',
-    'From ME to WE. The journey from skill to scale is also a journey from ME to WE.',
-    'Who does your brand really serve? The brand no longer exists primarily to make one person important.',
-    'Four hands join puzzle pieces around the word Brand. Build a brand that makes others important.',
-    'The many stakeholders of an enduring enterprise. A personality attracts attention. An institution organises contribution.',
-    'A lit runway stretching to the sunset. Don\'t just build an aircraft: sometimes the greatest opportunity is to build the runway.',
-    'The long runway theory. The most valuable runway is one on which others repeatedly find compelling reasons to build and grow.',
-    'The mobile phone: an industry in your pocket. A product can succeed because people use it. A platform can become consequential because people build upon it.',
-    'A hand holds a phone showing a UPI QR code and a green tick. QR codes and UPI: a simple enabling mechanism can unlock possibilities for an enormous number of people.',
-    'When other people\'s imagination joins yours. The founder does not need to imagine every future.',
-    'A team watches a rising chart over a city skyline. Creating value is not the same as capturing value.',
-    'A stack of stones: People, Processes, Systems, Brand, Leadership. Systems allow imagination to survive.',
-    'The future pays today. Valuation is the present economic expression of a future that others believe may be worth owning.',
-    'An hourglass in warm light. Can valuation make you live ten times your life? Valuation can reward you today for a portion of the future you have made credible.',
-    'The price of believing in tomorrow. Imagination creates the horizon. Credibility creates confidence in reaching it.',
-    'The \u20B9150 crore paradox. The scale of what you manage is not necessarily the measure of what you have built.',
-    'The founder who became unnecessary. Your greatest achievement may be creating something that no longer requires your constant presence to succeed.',
-    'What should your imagination leave behind? The deepest legacy may not be what you leave to people, but what you make possible for them.',
-    'A father and child watch a plane take off at sunset. The longest runway: the greatest imagination is the one that makes you useful to a future larger than yourself.'
+    "Cover: a man with a backpack sits on a hilltop watching the sun rise over the mountains. Money Is Made in Imagination: how the future you envision can become the wealth you create. Dharmendra Satapathy.",
+    "Contents: What is inside.",
+    "Imagination: Can You Live Ten Times Your Life?. A child's imagination and a larger future. Photo: A child gazes upward, smiling, holding a toy plane.",
+    "Can You Live Ten Times Your Life?. Text continued.",
+    "Imagination: Every Business Is Born Twice. From imagination to reality. Photo: A traveller watches a plane take off through an airport window.",
+    "Every Business Is Born Twice. Text continued.",
+    "Imagination: The Invisible Factory of Wealth. An idea that can reshape reality. Photo: A glowing light bulb beside a notebook sketch of a rocket.",
+    "The Invisible Factory of Wealth. Text continued.",
+    "Imagination: Imagination Is Not Daydreaming. The four bridges from idea to value. Photo: Four wooden puzzle pieces: Imagination, Execution, Adoption, Value Capture.",
+    "Imagination Is Not Daydreaming. Text continued.",
+    "Vision: The Difference Between Desire and Vision. Two different questions, two different futures. Photo: A signpost at sunset pointing two ways, Desire and Vision.",
+    "The Difference Between Desire and Vision. Text continued.",
+    "Desire Makes You Profitable. Vision Makes You Valuable..",
+    "Vision Is an Invitation.",
+    "Happiness May Be Hiding in Usefulness.",
+    "Relationships: The Difference Between Being Important and Being Useful. Dependence versus capability. Photo: Climbers help one another up a rock face.",
+    "The Difference Between Being Important and Being Useful. Text continued.",
+    "The Trap of Vertical Relationships.",
+    "Relationships: The Power of Horizontal Relationships. Partnership, respect and shared contribution. Photo: Three colleagues of different generations talk as equals.",
+    "The Power of Horizontal Relationships. Text continued.",
+    "From ME to WE.",
+    "Who Does Your Brand Really Serve?.",
+    "Brand: Build a Brand That Makes Others Important. A shared promise for all stakeholders. Photo: Four hands join puzzle pieces around the word Brand.",
+    "Build a Brand That Makes Others Important. Text continued.",
+    "The Many Stakeholders of an Enduring Enterprise.",
+    "The Runway: Don't Just Build an Aircraft. The power of the runway and the ecosystem. Photo: A lit runway stretching to the sunset.",
+    "Don't Just Build an Aircraft. Text continued.",
+    "The Long Runway Theory.",
+    "The Mobile Phone: An Industry in Your Pocket.",
+    "The Runway: QR Codes and UPI: The Power of Enabling Others. A simple enabler that unlocked millions of possibilities. Photo: A hand holds a phone showing a UPI QR code and a green tick.",
+    "QR Codes and UPI: The Power of Enabling Others. Text continued.",
+    "When Other People's Imagination Joins Yours.",
+    "The Runway: Creating Value Is Not the Same as Capturing Value. Enabling value, and building sustainable economics. Photo: A team watches a rising chart over a city skyline.",
+    "Creating Value Is Not the Same as Capturing Value. Text continued.",
+    "Valuation: Systems Allow Imagination to Survive. Turning individual skill into lasting capability. Photo: A stack of stones: People, Processes, Systems, Brand, Leadership.",
+    "Systems Allow Imagination to Survive. Text continued.",
+    "The Future Pays Today.",
+    "Valuation: Can Valuation Make You Live Ten Times Your Life?. How valuation can reward a longer future. Photo: An hourglass in warm light.",
+    "Can Valuation Make You Live Ten Times Your Life?. Text continued.",
+    "The Price of Believing in Tomorrow.",
+    "The ₹150 Crore Paradox.",
+    "The Founder Who Became Unnecessary.",
+    "What Should Your Imagination Leave Behind?.",
+    "Legacy: The Longest Runway. A future that continues beyond you. Photo: A father and child watch a plane take off at sunset.",
+    "The Longest Runway. Text continued.",
+    "Back cover: Money Is Made in Imagination. Your life may be finite. The future you create need not be. Dharmendra Satapathy."
   ];
   var SRC = ALT.map(function(_, i){ return './p' + (i + 1) + '.jpg'; });
   var THUMB = ALT.map(function(_, i){ return './t' + (i + 1) + '.jpg'; });
-  var N = ALT.length, W = 1200, H = 1600, cur = 0, flip = null, flat = false;
+  var N = ALT.length, W = 1243, H = 1761, cur = 0, flip = null, flat = false;
   var $ = function(id){ return document.getElementById(id); };
   var book = $('book'), stage = $('stage'), holder = $('holder');
 
