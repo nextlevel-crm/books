@@ -84,7 +84,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 
 <div class="app">
   <header class="topbar"><div class="topbar-in">
-    <div class="brand"><b>The Road Was <i>Already There</i></b><span>Dharmendra Satapathy · 55 pages</span></div>
+    <div class="brand"><b>The Road Was <i>Already There</i></b><span>Dharmendra Satapathy · 73 pages</span></div>
     <span class="ladder">Practitioner → Enterprise → Ecosystem</span>
     <a class="tb" href="../">All books</a>
     <a class="tb pdf" href="./the-road-was-already-there.pdf" download="The-Road-Was-Already-There.pdf">Download PDF</a>
@@ -99,7 +99,7 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
   <footer class="bar">
     <button type="button" id="first" aria-label="First page">⏮</button>
     <button type="button" id="prev">‹ Prev</button>
-    <span class="count" id="count" aria-live="polite"><b>1</b> / 55</span>
+    <span class="count" id="count" aria-live="polite"><b>1</b> / 73</span>
     <button type="button" id="next">Next ›</button>
     <button type="button" id="pagesBtn" aria-expanded="false">Pages</button>
     <button type="button" id="zoomBtn" title="Read one page large (or double-click a page)">Zoom</button>
@@ -112,36 +112,48 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
 <script>
 (function(){
   var ALT = [
-    "Cover: a road running to a red sun on the horizon, with warehouses and vehicles beside it. The Road Was Already There: How Ecosystems Create Entrepreneurs, by Dharmendra Satapathy.",
+    "Cover: a highway at sunrise running past winding dirt tracks, with warehouses and trucks beside it. The Road Was Already There: How Ecosystems Create Entrepreneurs, by Dharmendra Satapathy.",
     "Title page: The Road Was Already There. How Ecosystems Create Entrepreneurs. Dharmendra Satapathy. Dedication and imprint.",
     "Contents: a prologue, seventeen chapters in six parts, an epilogue, the principles and the models.",
+    "Illustration: a man breaks stones to lay a rough road up a hillside, beside a finished highway full of traffic. One entrepreneur builds the road; the other begins on a road someone else has built.",
     "Prologue, Two Entrepreneurs. Two Different Worlds..",
     "Prologue, Two Entrepreneurs. Two Different Worlds., continued.",
     "Prologue, Two Entrepreneurs. Two Different Worlds., continued.",
+    "Illustration: Ramesh in 2001, riding a scooter through an old Pune lane with a cloth bag of forms.",
+    "Illustration: a doctor at a clinic desk buried under ledgers: the best diagnostician in town, managing a small and badly run laboratory.",
     "Chapter 1, The Business Behind the Business.",
     "Chapter 1, The Business Behind the Business, continued.",
+    "Illustration: a cramped office of files and courier envelopes, Ramesh and two assistants on the phone. 2008: of sixty hours a week, thirty-five went to the machinery.",
     "Chapter 2, The Expense Nobody Sees.",
     "Chapter 2, The Expense Nobody Sees, continued.",
+    "Chapter 2, The Expense Nobody Sees, continued.",
+    "Illustration: a potter and a blacksmith at work side by side in a village. A blacksmith served a village; a payment network serves a nation.",
     "Chapter 3, Own the Journey, Access the Road.",
     "Chapter 3, Own the Journey, Access the Road, continued.",
     "Chapter 4, The Enablement Pyramid.",
     "Model 2, The Enablement Pyramid: the customer at the apex, then practitioner, business, suppliers and vendors, specific platforms such as Udemy, generic platforms such as UPI and Claude, and government and institutions at the foundation.",
     "Chapter 4, The Enablement Pyramid, continued.",
     "Chapter 4, The Enablement Pyramid, continued.",
+    "Chapter 4, The Enablement Pyramid, continued.",
+    "Illustration: two traders shake hands across sacks of spices in an old bazaar. For centuries, trade moved at the speed of personal trust.",
     "Chapter 5, How Strangers Learned to Trust One Another.",
     "Chapter 5, How Strangers Learned to Trust One Another, continued.",
     "Chapter 5, How Strangers Learned to Trust One Another, continued.",
+    "Illustration: a broad highway at sunset running past a web of dusty village tracks. A hundred roads, or one highway.",
     "Chapter 6, Why One Highway Can Be Better Than a Hundred Roads.",
-    "Chapter 6, Why One Highway Can Be Better Than a Hundred Roads, continued.",
     "Chapter 6, Why One Highway Can Be Better Than a Hundred Roads, continued.",
     "Chapter 7, Two Ways to Multiply an Entrepreneur’s Capacity.",
     "Chapter 7, Two Ways to Multiply an Entrepreneur’s Capacity, continued.",
+    "Illustration: a vegetable seller holds up a printed QR code as a customer pays by phone. Nobody at this market had to build a payment network.",
     "Chapter 8, The Cycle That Creates More Entrepreneurs.",
     "Chapter 8, The Cycle That Creates More Entrepreneurs, continued.",
     "Chapter 9, From Serving People to Enabling Those Who Serve.",
     "Chapter 9, From Serving People to Enabling Those Who Serve, continued.",
+    "Chapter 9, From Serving People to Enabling Those Who Serve, continued.",
+    "Illustration: two older men talk quietly at the edge of a family wedding. Everything is in my head. Who would pay for that?",
     "Chapter 10, Why Enablement Can Become Valuable.",
     "Chapter 10, Why Enablement Can Become Valuable, continued.",
+    "Illustration: a shopkeeper at an old kirana counter, around 1970, hands soap to a boy. When building a business meant building almost everything that supported it.",
     "Chapter 11, When Everyone Has the Road.",
     "Chapter 11, When Everyone Has the Road, continued.",
     "Chapter 11, When Everyone Has the Road, continued.",
@@ -150,16 +162,22 @@ body{background:radial-gradient(120% 90% at 50% 40%,var(--desk-2) 0%,var(--desk)
     "Chapter 13, Brand Equity Moves Down the Pyramid, continued.",
     "Chapter 13, Brand Equity Moves Down the Pyramid, continued.",
     "Chapter 13, Brand Equity Moves Down the Pyramid, continued.",
+    "Illustration: a glowing processor on a circuit board. A part no one would ever see, and a name millions came to trust.",
     "Chapter 14, Intel Inside, and the Google Lesson.",
     "Chapter 14, Intel Inside, and the Google Lesson, continued.",
+    "Chapter 14, Intel Inside, and the Google Lesson, continued.",
+    "Illustration: a long runway at sunset. Every enduring business needs a long runway.",
     "Chapter 15, The Two Runways.",
     "Chapter 15, The Two Runways, continued.",
     "Chapter 15, The Two Runways, continued.",
     "Chapter 15, The Two Runways, continued.",
     "Chapter 16, The Road May Belong to Someone Else.",
     "Chapter 16, The Road May Belong to Someone Else, continued.",
+    "Illustration: one shared operations room serving many small businesses. A road built once, used by many.",
     "Chapter 17, Build a Road for Other Distributors.",
     "Chapter 17, Build a Road for Other Distributors, continued.",
+    "Chapter 17, Build a Road for Other Distributors, continued.",
+    "Illustration: a highway at night carrying many headlights. A car carries its passengers. A road enables many cars to carry theirs.",
     "Epilogue, The Road That Made Other Journeys Possible.",
     "Epilogue, The Road That Made Other Journeys Possible, continued.",
     "Epilogue, The Road That Made Other Journeys Possible, continued.",
